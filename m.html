@@ -4,7 +4,122 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV - MURAD HASANOV</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 30%;
+      background: #1d3557;
+      color: white;
+      padding: 30px 20px;
+    }
+
+    .sidebar img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+
+    .sidebar h2 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .sidebar p,
+    .sidebar a {
+      font-size: 14px;
+      color: white;
+      line-height: 1.8;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 8px;
+    }
+
+    .main {
+      width: 70%;
+      padding: 30px;
+      background: white;
+    }
+
+    .main h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    .main h1 span {
+      color: #457b9d;
+    }
+
+    .main h2 {
+      font-size: 18px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    .main .section {
+      margin-bottom: 20px;
+    }
+
+    .main ul {
+      padding-left: 20px;
+    }
+
+    .main ul li {
+      margin-bottom: 5px;
+    }
+
+    .reference-entry {
+      margin-bottom: 10px;
+    }
+
+    .reference-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .section-content {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .toggle-btn {
+      background-color: #457b9d;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .toggle-btn:hover {
+      background-color: #1d3557;
+    }
+  </style>
 </head>
 <body>
   <div class="sidebar">
@@ -44,47 +159,66 @@
     <h3>Cybersecurity Engineer</h3>
 
     <div class="section">
-      <h2>PROFILE</h2>
-      <p>I studied information security in Azerbaijan. I can get any profession in the technology field. I am sure that I will do my best for the job.
-        As a passionate and driven individual with a strong background in IT and information security, I am eager to apply my skills and knowledge to the field of cybersecurity. With a keen interest in protecting digital assets and ensuring secure systems, I am committed to continuously developing my expertise in this ever-evolving field. My goal is to contribute to a safer digital world through innovative security solutions and proactive threat management.
-      </p>
-    </div>
-
-    <div class="section work-experience">
-      <h2>WORK EXPERIENCE</h2>
-
-      <p><strong>Bakcell Studio</strong> (2029 - PRESENT)<br>Programmer</p>
-      <ul>
-        <li>Improving program arena in Bakcell Studio</li>
-        <li>Lead and mentor a high-performing team</li>
-        <li>Leadership in Bakcell InfoTexGroup</li>
-      </ul>
-
-      <p><strong>Azersun Holding</strong> (2025 - 2029)<br>Computer Engineer</p>
-      <ul>
-        <li>System Organization</li>
-        <li>Monitoring of Assets</li>
-        <li>Establishing an Information Security Structure</li>
-      </ul>
-
-      <p><strong>UNEC</strong> (2024 - 2025)<br>Programming Instructor</p>
-      <ul>
-        <li>Learning C++ and Python</li>
-        <li>Learning HTML, CSS, and JavaScript</li>
-      </ul>
+      <button class="toggle-btn" onclick="toggleSection('profile')">Toggle Profile</button>
+      <div id="profile" class="section-content">
+        <h2>PROFILE</h2>
+        <p>I studied information security in Azerbaijan. I can get any profession in the technology field. I am sure that I will do my best for the job.
+          As a passionate and driven individual with a strong background in IT and information security, I am eager to apply my skills and knowledge to the field of cybersecurity. With a keen interest in protecting digital assets and ensuring secure systems, I am committed to continuously developing my expertise in this ever-evolving field. My goal is to contribute to a safer digital world through innovative security solutions and proactive threat management.
+        </p>
+      </div>
     </div>
 
     <div class="section">
-      <h2>REFERENCE</h2>
-      <div class="reference-container">
-        <div class="reference-entry">
-          <p><strong>H.Samiq</strong><br>AZTU / CEO<br>📞 +994779997722<br>✉️ samiqh002@gmail.com</p>
-        </div>
-        <div class="reference-entry">
-          <p><strong>H.Sadiq</strong><br>UNEC / CEO<br>📞 +994557779900<br>✉️ hasanzada001@gmail.com</p>
+      <button class="toggle-btn" onclick="toggleSection('work-experience')">Toggle Work Experience</button>
+      <div id="work-experience" class="section-content">
+        <h2>WORK EXPERIENCE</h2>
+        <p><strong>Bakcell Studio</strong> (2029 - PRESENT)<br>Programmer</p>
+        <ul>
+          <li>Improving program arena in Bakcell Studio</li>
+          <li>Lead and mentor a high-performing team</li>
+          <li>Leadership in Bakcell InfoTexGroup</li>
+        </ul>
+
+        <p><strong>Azersun Holding</strong> (2025 - 2029)<br>Computer Engineer</p>
+        <ul>
+          <li>System Organization</li>
+          <li>Monitoring of Assets</li>
+          <li>Establishing an Information Security Structure</li>
+        </ul>
+
+        <p><strong>UNEC</strong> (2024 - 2025)<br>Programming Instructor</p>
+        <ul>
+          <li>Learning C++ and Python</li>
+          <li>Learning HTML, CSS, and JavaScript</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <button class="toggle-btn" onclick="toggleSection('references')">Toggle References</button>
+      <div id="references" class="section-content">
+        <h2>REFERENCE</h2>
+        <div class="reference-container">
+          <div class="reference-entry">
+            <p><strong>H.Samiq</strong><br>AZTU / CEO<br>📞 +994779997722<br>✉️ samiqh002@gmail.com</p>
+          </div>
+          <div class="reference-entry">
+            <p><strong>H.Sadiq</strong><br>UNEC / CEO<br>📞 +994557779900<br>✉️ hasanzada001@gmail.com</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    function toggleSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      if (section.style.display === "none" || section.style.display === "") {
+        section.style.display = "block";
+      } else {
+        section.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
