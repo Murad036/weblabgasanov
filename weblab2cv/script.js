@@ -1,16 +1,35 @@
 function toggleSection(id) {
-    const section = document.getElementById(id);
-    section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
+  var sec = document.getElementById(id);
+  if (sec.style.display === "block") {
+    sec.style.display = "none";
+  } else {
+    sec.style.display = "block";
   }
-  
-  function updateCV() {
-    const profileText = document.getElementById("profileText").value;
-    const contactText = document.getElementById("contactText").value;
-    const skillsText = document.getElementById("skillsText").value;
-  
-    // Update CV profile text
-    document.getElementById("profile").innerHTML = `<p>${profileText}</p>`;
-    document.getElementById("contact").innerHTML = `<p>${contactText}</p>`;
-    document.getElementById("skills").innerHTML = `<ul><li>${skillsText}</li></ul>`;
+}
+
+function addContent(id, inputId) {
+  var box = document.getElementById(id);
+  var inp = document.getElementById(inputId);
+  var val = inp.value.trim();
+
+  if (val) {
+    var p = document.createElement("p");
+    p.textContent = val;
+    box.appendChild(p);
+    inp.value = "";
   }
-  
+}
+
+function addListItem(id, inputId) {
+  var box = document.getElementById(id);
+  var list = box.querySelector("ul");
+  var inp = document.getElementById(inputId);
+  var val = inp.value.trim();
+
+  if (val) {
+    var li = document.createElement("li");
+    li.textContent = val;
+    list.appendChild(li);
+    inp.value = "";
+  }
+}
