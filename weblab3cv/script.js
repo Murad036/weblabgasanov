@@ -1,28 +1,61 @@
+// tema dəyişimi
+function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
+}
 
+// bölməni göstər/gizlət
 function toggleSection(id) {
-    const section = document.getElementById(id);
-    section.style.display = section.style.display === 'none' || section.style.display === '' ? 'block' : 'none';
+  const sec = document.getElementById(id);
+  if (sec.style.display === "block") {
+    sec.style.display = "none";
+  } else {
+    sec.style.display = "block";
   }
-  
-  function toggleTheme() {
-    document.body.classList.toggle('dark-mode');
+}
+
+// paraqraf əlavə et
+function addContent(id, inputId) {
+  const box = document.getElementById(id);
+  const inp = document.getElementById(inputId);
+  const val = inp.value.trim();
+
+  if (val) {
+    const p = document.createElement("p");
+    p.textContent = val;
+    box.appendChild(p);
+    inp.value = "";
   }
-  
-  function updateClock() {
-    const now = new Date();
-    const time = now.toLocaleTimeString();
-    const date = now.toLocaleDateString();
-    document.getElementById("clock").textContent = `${date} ${time}`;
+}
+
+// siyahı elementini əlavə et
+function addListItem(id, inputId) {
+  const box = document.getElementById(id);
+  const list = box.querySelector("ul");
+  const inp = document.getElementById(inputId);
+  const val = inp.value.trim();
+
+  if (val) {
+    const li = document.createElement("li");
+    li.textContent = val;
+    list.appendChild(li);
+    inp.value = "";
   }
-  setInterval(updateClock, 1000);
-  updateClock();
-  
-  function addContent(sectionId, content) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const newElement = document.createElement("p");
-      newElement.innerHTML = content;
-      section.appendChild(newElement);
-    }
+}
+
+// saat funksiyası
+function updateClock() {
+  const now = new Date();
+  const h = String(now.getHours()).padStart(2, "0");
+  const m = String(now.getMinutes()).padStart(2, "0");
+  const s = String(now.getSeconds()).padStart(2, "0");
+  const time = `${h}:${m}:${s}`;
+
+  const clock = document.getElementById("clock");
+  if (clock) {
+    clock.textContent = time;
   }
-  
+}
+
+// saatı hər saniyə yenilə
+setInterval(updateClock, 1000);
+updateClock();
