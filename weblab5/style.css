@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  background: #f9f9f9;
+  color: #333;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode .main {
+  background-color: #1e1e1e;
+  color: #eee;
+}
+
+body.dark-mode .sidebar {
+  background-color: #2b2b2b;
+}
+
+.sidebar {
+  width: 30%;
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.sidebar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+.sidebar h2 {
+  font-size: 17px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: #34495e;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar .toggle-content,
+.main .toggle-content {
+  display: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.sidebar p,
+.sidebar a,
+.sidebar ul li,
+.main ul li {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.sidebar ul,
+.main ul {
+  padding-left: 18px;
+}
+
+.main {
+  width: 70%;
+  padding: 30px;
+  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main h1 {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.main h1 span {
+  color: #2980b9;
+}
+
+.main h3 {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.main h2 {
+  font-size: 17px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: #ececec;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reference-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+button.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #34495e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.theme-toggle:hover {
+  background: #2c3e50;
+}
+
+.add-controls {
+  margin-top: 10px;
+}
+
+.add-controls input, .add-controls textarea {
+  width: 78%;
+  padding: 8px;
+  margin-right: 6px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+}
+
+.add-controls button {
+  padding: 8px 14px;
+  background-color: #34495e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-controls button:hover {
+  background-color: #2c3e50;
+}
+
+body.dark-mode .main h2,
+body.dark-mode .sidebar h2 {
+  color: white;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+.personal-info-section {
+  background-color: #34495e;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+body.dark-mode .personal-info-section {
+  background-color: #34495e;
+}
+
+.personal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.personal-info-grid .form-group {
+  margin-bottom: 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.save-controls {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.save-controls button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #152637;
+  color: white;
+}
+
+.load-btn {
+  background-color: #152637;
+  color: white;
+}
+
+.clear-btn {
+  background-color: #6b0f05;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #3d3a39;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.edit-btn:hover {
+  background-color: #b90009;
+}
+
+.edit-form {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+body.dark-mode .edit-form {
+  background-color: #333;
+}
+
+.edit-form textarea {
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+}
+
+.edit-form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-form-buttons button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-edit-btn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.cancel-edit-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+@media (max-width: 1200px) {
+  .personal-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar, .main {
+    width: 100%;
+  }
+  .personal-info-grid {
+    grid-template-columns: 1fr;
+  }
+}

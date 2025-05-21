@@ -1,0 +1,40 @@
+// baslayaqee jsona Ya Allah
+const cvData = {
+    contact: [
+      "📞 +994773034006",
+      "✉ hasanov036@gmail.com",
+      "📍 Baku, Azerbaijan",
+      "🌐 www.azedevoloper.com"
+    ],
+    education: [
+      "2028 - 2030<br><strong>UNEC</strong><br>Master Computer Engineering",
+      "2024 - 2028<br><strong>Azerbaijan Technical University</strong><br>Bachelor IT<br>GPA: 92.5 / 100"
+    ],
+    skills: [
+      "Project Management",
+      "Public Relations",
+      "Teamwork",
+      "Time Management",
+      "Leadership",
+      "Effective Communication",
+      "Critical Thinking"
+    ],
+    languages: [
+      "English (Fluent)",
+      "Turkish (Fluent)",
+      "Spanish (Basic)"
+    ],
+    profile: [
+      "I studied information security in Azerbaijan. I can get any profession in the technology field.",
+      "As a passionate and driven individual with a strong background in IT and information security, I am eager to apply my skills and knowledge to the field of cybersecurity. My goal is to contribute to a safer digital world through innovative security solutions."
+    ],
+    experience: [
+      "<strong>Bakcell Studio</strong> (2029 - PRESENT)<br>Programmer<ul><li>Improving program arena in Bakcell Studio</li><li>Lead and mentor a high-performing team</li><li>Leadership in Bakcell InfoTexGroup</li></ul>",
+      "<strong>Azersun Holding</strong> (2025 - 2029)<br>Computer Engineer<ul><li>System Organization</li><li>Monitoring of Assets</li><li>Establishing an Information Security Structure</li></ul>",
+      "<strong>UNEC</strong> (2024 - 2025)<br>Programming Instructor<ul><li>Learning C++ and Python</li><li>Learning HTML, CSS, and JavaScript</li></ul>"
+    ],
+    reference: [
+      "<strong>H.Samiq</strong><br>AZTU / CEO<br>📞 +994779997722<br>✉ samiqh002@gmail.com",
+      "<strong>H.Sadiq</strong><br>UNEC / CEO<br>📞 +994557779900<br>✉ hasanzada001@gmail.com"
+    ]
+  };
