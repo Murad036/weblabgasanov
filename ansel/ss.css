@@ -1,0 +1,134 @@
+/* Ümumi səhifə tərzi */
+body {
+  font-family: Arial, sans-serif; /* Bütün saytda istifadə ediləcək şrift */
+  margin: 0; /* Səhifənin ətrafındakı boşluqları sıfırlayır */
+  padding: 0; /* Daxili boşluqları sıfırlayır */
+  background-color: #f4f4f4; /* Açıq boz fon rəngi */
+  color: #333; /* Əsas mətnin tünd boz rəngi */
+}
+
+/* Header tərzi */
+header {
+  background-color: #011a3b; /* Header fonu: tünd mavi */
+  padding: 20px 0; /* Yuxarı və aşağıdan boşluq 20px */
+  text-align: center; /* Mətn ortalanır */
+  color: #fff; /* Ağ rəngli mətn */
+}
+
+header h1 {
+  font-size: 36px; /* Başlığın ölçüsü */
+  margin: 0; /* Margin sıfırlanır */
+  color: #fff; /* Ağ rəngdə mətn */
+}
+
+/* Axtarış paneli */
+section {
+  padding: 20px; /* Daxili boşluq */
+  margin-top: 20px; /* Yuxarıdan boşluq */
+  background-color: #fff; /* Panelin fonu ağ */
+  border-radius: 8px; /* Künclər yumrulanır */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Yumşaq kölgə effekti */
+  margin: 20px auto; /* Yuxarı-aşağı 20px, ortalanmış margin */
+  max-width: 900px; /* Maksimum eni 900px */
+}
+
+h1 {
+  font-size: 28px; /* Başlığın ölçüsü */
+  margin-bottom: 20px; /* Alt boşluq */
+  color: #333; /* Tünd boz mətn */
+}
+
+form {
+  display: grid; /* Form elementlərini grid olaraq düzür */
+  gap: 15px; /* Elementlər arasında boşluq */
+}
+
+label {
+  font-size: 16px; /* Labelin ölçüsü */
+  font-weight: bold; /* Qalın şrift */
+}
+
+select, input[type="number"], button {
+  padding: 10px; /* Daxili boşluq */
+  font-size: 16px; /* Şrift ölçüsü */
+  border-radius: 5px; /* Künclər yumrulanır */
+  border: 1px solid #ddd; /* Açıq boz sərhəd */
+}
+
+button {
+  background-color: #1e2a3a; /* Tünd fon */
+  color: #fff; /* Ağ mətn */
+  cursor: pointer; /* Hover zamanı mouse dəyişir */
+}
+
+button:hover {
+  background-color: #f68c00; /* Hover zamanı narıncı rəng */
+}
+
+/* Elan kartı */
+.elan {
+  display: flex; /* Elementləri yan-yana düzür */
+  flex-wrap: wrap; /* Kiçik ekranda alta keçməyə imkan verir */
+  justify-content: space-between; /* Aralarında boşluq */
+  margin-bottom: 20px; /* Alt boşluq */
+  padding: 20px; /* Daxili boşluq */
+  background-color: #fff; /* Ağ fon */
+  border-radius: 12px; /* Yumru künclər */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Kölgə effekti */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Yumşaq hover keçidi */
+}
+
+/* Hover effekti elan üçün */
+.elan:hover {
+  background-color: #001F3F; /* Hover zamanı fon tünd mavi olur */
+  color: #fff; /* Mətn ağ olur */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Kölgə dərinləşir */
+  transform: translateY(-15px); /* Kart yuxarı qalxır */
+}
+
+.elan img {
+  width: 100%; /* Tam genişlik */
+  max-width: 320px; /* Maksimum 320px */
+  height: auto; /* Proporsional hündürlük */
+  border-radius: 12px; /* Şəklin küncləri yumrulanır */
+  margin-right: 20px; /* Sağ boşluq */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Şəklin kölgəsi */
+}
+
+.elan h3 {
+  font-size: 26px; /* Başlıq ölçüsü */
+  color: #1F3A64; /* Mavi rəng */
+  margin: 15px 0; /* Yuxarı-aşağı boşluq */
+  font-weight: 700; /* Qalın şrift */
+}
+
+/* Hover zamanı başlıq rəngi dəyişir */
+.elan:hover h3 {
+  color: #fff; /* Hover zamanı başlıq da ağ olur */
+}
+
+.elan p {
+  font-size: 16px; /* Parqraf şrift ölçüsü */
+  color: #666; /* Açıq boz mətn */
+  line-height: 1.5; /* Sətir hündürlüyü */
+  margin: 5px 0; /* Yuxarı-aşağı boşluq */
+}
+
+.elan p strong {
+  font-weight: bold; /* Qalın mətn */
+  color: #001F3F; /* Tünd mavi rəng */
+}
+
+/* Mobil cihazlar üçün tərtibat */
+@media (max-width: 768px) {
+  .elan {
+    flex-direction: column; /* Elementlər alt-alta düzülür */
+    align-items: center; /* Ortalanır */
+  }
+
+  .elan img {
+    max-width: 100%; /* Şəklin eni konteyneri keçmir */
+    margin-bottom: 15px; /* Alt boşluq */
+  }
+}
+
